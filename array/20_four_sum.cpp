@@ -30,11 +30,9 @@ vector<vector<int>> fourSum(vector<int> &nums, int target)
 
     for (int i = 0; i < n; i++)
     {
-        int target_3 = target - nums[i];
-
         for (int j = i + 1; j < n; j++)
         {
-            int target_2 = target_3 - nums[j];
+            int target_2 = target - nums[i] - nums[j];
 
             int front = j + 1;
             int back = n - 1;
@@ -43,7 +41,7 @@ vector<vector<int>> fourSum(vector<int> &nums, int target)
             {
                 int two_sum = nums[front] + nums[back];
 
-                if (two_sum < target_3)
+                if (two_sum < target_2)
                 {
                     front++;
                 }
@@ -105,3 +103,6 @@ int main()
 
     return 0;
 }
+
+// Time complexity : O(N^3)
+// Space Complexity : O(1)
