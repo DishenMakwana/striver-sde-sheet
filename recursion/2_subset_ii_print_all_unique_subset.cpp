@@ -50,7 +50,11 @@ vector<vector<int>> subsetWithDup(vector<int> &nums)
 
 int main()
 {
-    vector<int> nums = {1, 2, 2, 2, 3, 3};
+    vector<int> nums = {
+        1,
+        2,
+        2,
+    };
 
     vector<vector<int>> ans = subsetWithDup(nums);
 
